@@ -1,0 +1,40 @@
+<%= simple_form_for [@modulo,@operation], :html => { :class => 'form-group' } do |f| %>
+<div class="form-group">
+  <%= f.label :Nombre %>
+  <%= f.text_field :nombre, class: "form-control",         placeholder: "Ingrese el nombre" %>
+</div>  
+<div class="form-group">
+  <%= f.label :Sam %>
+  <%= f.text_area :sam, class: "form-control", placeholder: "Ingrese el sam" %>
+</div>  
+<div class="form-group">
+  <%= f.label :Descripcion %>
+  <%= f.text_area :descripcion, class: "form-control", placeholder: "Ingrese una descripcion" %>
+</div>  
+<div class="form-group">
+    <%= f.label :Maquina %>  <br>
+    <%= f.collection_select :maquina_id, Maquina.all, :id, :nombre, class: "form-control", prompt: "Seleccione Maquina" %>
+</div> 
+
+ <div class="field">
+  <%= f.label :Imagen %><br>
+  <%= f.file_field :image %>
+</div>
+
+<div class="field">
+  <%= f.label :Video %><br>
+  <%= f.file_field :video %>
+</div>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+  modulo_operations_path(@modulo), :class => 'btn btn-default' %>
+<% end %>
+
+<script>
+$("#file-1").fileinput({
+showCaption: false,
+browseClass: "btn btn-primary btn-lg",
+fileType: "any"
+});
+</script>

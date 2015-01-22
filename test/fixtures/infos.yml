@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  referencia: MyString
+  talla: MyString
+  talla_promedio: MyString
+  color: MyString
+  tela: MyString
+  descripcion: MyText
+  especificaciones: MyText
+  modulo_id: 
+  ficha_id: 
+
+two:
+  referencia: MyString
+  talla: MyString
+  talla_promedio: MyString
+  color: MyString
+  tela: MyString
+  descripcion: MyText
+  especificaciones: MyText
+  modulo_id: 
+  ficha_id: 
